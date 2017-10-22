@@ -4,12 +4,12 @@ public class Entity {//one item in a blueprint, some regular blueprint-attribute
     static int anzahlImBP;
     static int anzahlStacks;//lieber durch eine funktion ausrechnen lassen und dynamisch abfragen
 /*später mehr
-    int positionX;
-    int positionY;
-    Boolean constOnOff;
-    Filter[] filtersignals = new Filter[18]; //Objekt für die CC-signale und ggf. RequesterChest-Filter 
-    static int stack_size;//variable der Stacksize
-*/        
+ *  int positionX;
+ *  int positionY;
+ *  Boolean constOnOff;
+ *  Filter[] filtersignals = new Filter[18]; //Objekt für die CC-signale und ggf. RequesterChest-Filter 
+ *  static int stack_size;//variable der Stacksize
+ */        
     Entity (){}
     Entity (String name_){
 	name = name_;
