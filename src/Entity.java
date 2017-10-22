@@ -38,13 +38,13 @@ void createItemLib(Entity [] library) {
 	library[i++] = new Entity ("nuclear_reactor",100);
 	library[i++] = new Entity ("steam_turbine",20);
 	library[i++] = new Entity ("tank",50);
+
+	library[i++] = new Entity ("solar-panel",50);
 	}
 
 
 
 }//end Entity
-
-//end Item
 
 
 /*start comment nirvana

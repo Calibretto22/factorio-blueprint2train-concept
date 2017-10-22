@@ -10,16 +10,28 @@ public class Main {
 
     }
 
-//remove first char (it marks versionnumber ob BP)
-//decode BP zip 
-//decode BP base64
-// 	note: you has json
-//	(store json in array of item-objects? (store all attributes))    
-//count item.name, store in blueprintItemAmmount-array
-//create Stacklibary
-//calculate Stacknumber per item store
-//count complete number of stacks
-//
-
-
-}
+    /*
+     * done: remove first char (it marks versionnumber ob BP)
+     * done: decode BP zip 
+     * done: decode BP base64
+     *   note: you has json
+     *   (store json in array of item-objects? (store all attributes))    
+     * count item.name, store in blueprintItemAmmount-array
+     * create Stacklibary
+     * calculate Stacknumber per item store
+     * count complete number of stacks
+     * determine number of wagons
+     * distribute to wagons
+     * create CCombinators per wagon 
+     * create multi CCombinators per wagon if needed
+     * 
+     * create JSON
+     * read JSON
+     * create zip
+     * create base64
+     * add preliminary 0
+     *  
+    */
+    }
+//wrong output replit: 0eO+/vUXvv73vv70KQiEQBO+/vX/vv73vv70N77+977+9Ru+/vSsR77+977+9D++/ve+/ve+/ve+/ve+/vXLvv73fswh6GRjvv73vv73vv73vv71x77+9Uu+/vXbvv70O77+9Hnrvv70G77+977+977+977+977+9NXnvv73vv70TQV0SMFrvv73vv70e77+9U++/vSDvv73cpu+/ve+/ve+/vS/vv73vv70c77+9Tghd77+977+977+9Lwjvv73vv73vv714LglP77+977+9Cxdr77+9cj1bczFj77+9Ae+/vQEwUQ==
+//wrong output eclpis: 0eJxFzdEKQiEQBNB/mecNyuRG+ysRobAPgq6i3uhy8d+zCHoZGJjD7PBxlVKDdvAO0R56Pwa+/cr20DV5qeATQV0SMFqOrh6KU4kglNymyfrxL/CRsM0c404IXdLc/y8I0fmpeC4JT6ntCxdrzXI9W3MxY7wBqAEwUQ== 

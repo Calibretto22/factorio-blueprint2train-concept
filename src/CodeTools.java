@@ -39,61 +39,27 @@ public class CodeTools {
     	return "Error - no Factorio Bluprint / first Character of String is not zero"; 
     	}
 
-    String encodeJSONtoBlueprintString (String jsonString) {//hier fummel ich das JSON-Objekt wieder zu einem FBP zusammen (ZIP, BASE64, +0)
+    String encodeJSONtoBlueprintString (String jsonString) throws IOException {//hier fummel ich das JSON-Objekt wieder zu einem FBP zusammen (ZIP, BASE64, +0)
 	//möglicherweise übergebe ich keinen String sondern ein JSONobjekt - das wird sich mit der Zeit zeigen
-	//ohne excapes: {"blueprint":{"entities":[{"entity_number":1,"name":"solar-panel","position":{"x":0,"y":0}}],"item":"blueprint","label":"x","version":64426934272}}
 	if (jsonString == "") {jsonString="{\"blueprint\":{\"entities\":[{\"entity_number\":1,\"name\":\"solar-panel\",\"position\":{\"x\":0,\"y\":0}}],\"item\":\"blueprint\",\"label\":\"x\",\"version\":64426934272}}";}
-
-
-
-	    return "FBPstring";
-	}    
-    
-    
-
-/*
-package zlib.example;
-
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.util.Arrays;
-import java.util.zip.Deflater;
-import java.util.zip.DeflaterOutputStream;
-import java.util.zip.InflaterInputStream;
-
-
-public class Main {
-    private final static String inputStr = "Hello World!";
-
-    public static void main(String[] args) throws Exception {
-        System.out.println("Will zlib compress following string: " + inputStr);
-
-        // will compress "Hello World!"
+	//ohne escapes: {"blueprint":{"entities":[{"entity_number":1,"name":"solar-panel","position":{"x":0,"y":0}}],"item":"blueprint","label":"x","version":64426934272}}
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         DeflaterOutputStream dos = new DeflaterOutputStream(baos);
-        dos.write(inputStr.getBytes());
+        dos.write(jsonString.getBytes());//getbytes returned ein bytearray
         dos.flush();
         dos.close();
-
-        // at this moment baos.toByteArray() holds the compressed data of "Hello World!"
-        System.out.println("Compressed result: " + baos);
-
-        // will decompress compressed "Hello World!"
-        ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
-        InflaterInputStream iis = new InflaterInputStream(bais);
-
-        String result = "";
-        byte[] buf = new byte[5];
-        int rlen = -1;
-        while ((rlen = iis.read(buf)) != -1) {
-            result += new String(Arrays.copyOf(buf, rlen));
-        }
-
-        // now result will contain "Hello World!"
-
-        System.out.println("Decompress result: " + result);
-    }
+  System.out.println("baos-----: "+baos);
+    System.out.println("--------------------------------------");
+    	String outputToSting = baos.toString();
+  System.out.println("b64BA-----: "+outputToSting);    	
+     System.out.println("--------------------------------------");
+    	byte[] b64BA = outputToSting.getBytes();
+//    	baos.toByteArray(b64BA);
+        Base64.Encoder enc= Base64.getEncoder();
+        String toBeReturnedString = "0" + enc.encodeToString(b64BA);
+  System.out.println("toBeReturnedString-----: "+toBeReturnedString);          
+    System.out.println("--------------------------------------");
+	//System.out.println(toBereturnedString);
+	return toBeReturnedString;
+	}
 }
-*/
-}
-
