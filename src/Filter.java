@@ -1,5 +1,3 @@
-//will not compile
-
 public class Filter{
 	int filterIndex;
 	int filterCount;

@@ -3,20 +3,24 @@ public class Entity {//one item in a blueprint, some regular blueprint-attribute
     String name;
     static int anzahlImBP;
     static int anzahlStacks;//lieber durch eine funktion ausrechnen lassen und dynamisch abfragen
-//später mehr
+/*später mehr
     int positionX;
     int positionY;
     Boolean constOnOff;
     Filter[] filtersignals = new Filter[18]; //Objekt für die CC-signale und ggf. RequesterChest-Filter 
     static int stack_size;//variable der Stacksize
-        
+*/        
     Entity (){}
     Entity (String name_){
 	name = name_;
 	anzahlImBP++;
     	}
+    Entity(String filterName_, int stack_size_){
+	name = filterName_;
+	//stack_size = stack_size_;
+}
     
-    int numberofStacks (String name, int quantity) {
+    int numberofStacks (int quantity) {
 	//wie groß ist die stacksize des items? 
 	// https://www.reddit.com/r/factorio/comments/4huy05/where_are_item_stack_sizes_documented/	
 	//wie viele stacks davon sind im blueprint? 
@@ -26,17 +30,6 @@ public class Entity {//one item in a blueprint, some regular blueprint-attribute
 	return stack;	
     	}
     
-    int giveStack_size () {
-	return stack_size;
-	}//end giveStack_size 
-    
-Entity(String filterName_, int stack_size_){
-		name = filterName_;
-		stack_size = stack_size_;
-}
-
-
-
 void createItemLib(Entity [] library) {
 	int i=0; //local index
 	library[i++] = new Entity ("programmable_speaker", 200);
