@@ -1,30 +1,29 @@
 
 public class Entity {//one item in a blueprint, some regular blueprint-attributes are to be added
-    String name;
-    static int anzahlImBP;
-    static int anzahlStacks;//lieber durch eine funktion ausrechnen lassen und dynamisch abfragen
-/*sp‰ter mehr
- *  int positionX;
- *  int positionY;
- *  Boolean constOnOff;
- *  Filter[] filtersignals = new Filter[18]; //Objekt f¸r die CC-signale und ggf. RequesterChest-Filter 
- *  static int stack_size;//variable der Stacksize
- */        
+	int entity_number;
+	String name;
+    int positionX;
+ 	int positionY;
+ 	Boolean constOnOff;
+ 	Filter[] filtersignals = new Filter[18]; //Objekt f√ºr die CC-signale und ggf. RequesterChest-Filter 
+ 	       
     Entity (){}
-    Entity (String name_){
-	name = name_;
-	anzahlImBP++;
-    	}
+    
     Entity(String filterName_, int stack_size_){
 	name = filterName_;
 	//stack_size = stack_size_;
 }
     
+	public void setEntityNumber(int entity_number_) {
+		this.entity_number = entity_number_;}
+    
+	
+	
     int numberofStacks (int quantity) {
-	//wie groﬂ ist die stacksize des items? 
+	//wie gro√ü ist die stacksize des items? 
 	// https://www.reddit.com/r/factorio/comments/4huy05/where_are_item_stack_sizes_documented/	
 	//wie viele stacks davon sind im blueprint? 
-	//die anzahl der stacks wird sp‰ter auf den trainwagon verteilt 
+	//die anzahl der stacks wird sp√§ter auf den trainwagon verteilt 
 
 	int stack = 5;
 	return stack;	
