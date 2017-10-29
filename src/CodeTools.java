@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.zip.Deflater;
 import java.util.zip.DeflaterOutputStream;
 import java.util.zip.InflaterInputStream;
-
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
@@ -19,16 +18,16 @@ public class CodeTools {
 
     static String decodeBPstringtoJSON(String fbpString) throws IOException {	//konvertiert den BPstring zu einem JSON-String
     	fbpString.trim();//entfernt leerzeichen vom string, vorne und hinten 
-//    	if (fbpString.subSequence(0, 1) == "0") {//pr�ft ob erstes Zeichen 0 ist
+//    	if (fbpString.subSequence(0, 1) == "0") {//prüft ob erstes Zeichen 0 ist
     	    fbpString = fbpString.substring(1);
 
     	    Base64.Decoder decoderVar = Base64.getDecoder();	//ich mache ein objekt in der Form des Outputs der getDecoder-Methode.
-    	    byte[] bytearray_decoderVar = decoderVar.decode(fbpString.getBytes());//ich verwende eine methode des ausgangsobjektes und sch�tte den damit erzeugten input input in das objekt und verwende dazu eine methode  
+    	    byte[] bytearray_decoderVar = decoderVar.decode(fbpString.getBytes());//ich verwende eine methode des ausgangsobjektes und schütte den damit erzeugten input input in das objekt und verwende dazu eine methode  
     	    ByteArrayInputStream bais = new ByteArrayInputStream(bytearray_decoderVar);
     	    InflaterInputStream iis = new InflaterInputStream(bais);
 	    
     	    String uglyJSONreturn = "";//es muss erstmal ein leerer string erzeugt werden
-	    byte[] buffer = new byte[5];//ein buffer f�r i dunno
+	    byte[] buffer = new byte[5];//ein buffer für i dunno
 	    int returnStringLength = -1;
 	    while ((returnStringLength = iis.read(buffer)) != -1) {
 		uglyJSONreturn += new String(Arrays.copyOf(buffer, returnStringLength));
@@ -52,7 +51,7 @@ public class CodeTools {
 	return toBeReturnedString;
 	}
     
-	static void parseJSON(JsonParser jsonParser, Blueprint importBP, List<IconsInBP> icons, GenericSignal signal, boolean insidePropertiesObj) throws JsonParseException, IOException {
+	static void parseJSON(JsonParser jsonParser, Blueprint importBP, IconsInBP icons, GenericSignal signal, boolean insidePropertiesObj) throws JsonParseException, IOException {
 		
 		//loop through the JsonTokens
 		while(jsonParser.nextToken() != JsonToken.END_OBJECT){
