@@ -32,7 +32,6 @@ public class CodeTools {
 	    while ((returnStringLength = iis.read(buffer)) != -1) {
 		uglyJSONreturn += new String(Arrays.copyOf(buffer, returnStringLength));
 	    	}
-	    //System.out.println(uglyjsonreturn);
 	    return uglyJSONreturn;
 //    	}//end leading 0-check
 //    	return "Error - this is no Factorio Bluprint: " + fbpString; 

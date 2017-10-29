@@ -1,8 +1,8 @@
-import com.fasterxml.jackson.core.JsonFactory;
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.core.JsonToken;
+
 import java.io.IOException;
+
+import com.fasterxml.jackson.core.JsonFactory;
+import com.fasterxml.jackson.core.JsonParser;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -12,7 +12,7 @@ public class Main {
 	String countexapmple = "0eNqlVE2PmzAQ/S9zhookhJVQ20vV2956rFbIMUMyWn+wtok2ivjvHZNsyAfsYXsBBs88v3nz7CNsVIetIxOgPAJJazyUf4/gaWuEiv/CoUUogQJqSMAIHaMaJdXoUmn1howI1kGfAJka36Fc9C8JoAkUCE9oQ3CoTKc36DjhgqPslnwgmcod+pB6BhJb5H1a67ncmsiAIdNlAgcos75PHtCWFzQfhHxNG1KBqZHx6PhjFixdMGVuODirqg3uxJ64DU6R5GRHoeK1+lLXkPOhepBlTy50/GfkMGSkz3ACZ0pR2kUMdCvcIFUJP+LyR/O3G41F2V3R9wHzTE7bGivbVLZFXh9qz/0YlDH2EWwRHw7r6ykQR8UIFMNl/8LKwkm508g+ZnlpjJw1qXUInPs4hNXdEObVz0bxa3InrlDmE5j5nE0cvnX8nkfPGPycVE01NXblrHzFkDYdxhlK20XhV9lkj+tLlcaaOp2iYvqOabVWTZl2ceOzr85lgknx2UF84HGmkX1bzxj+DDL60H/B8bhHdwg7Mttb69+7+CdX2i603X9gt4dqGFXVOKsrMgwGZSOUx/5R6+WM1usrYUex+eoarrry6mbkoyo2bJAS/mih1O93oVuF+a/BLQkwOT+oXeT5snhaPRVF3vf/ABY+19w=";
 	String microsample = "0eNpFzdEKQiEQBNB/mecNyuRG+ysRobAPgq6i3uhy8d+zCHoZGJjD7PBxlVKDdvAO0R56kAa+/cr20DV5qeATQV0SMFqOrh6KU4kglNymyfrxL/CRsM0c404IXdLc/y8I0fmpeC4JT6ntCxdrzXI9W3MxY7wBqAEwUQ==";
 	
-	System.out.println("dstributed clusterF*ck");
+	System.out.println("distributed clusterF*ck");
 	System.out.println("Microsample inp: " + countexapmple);
 	String uglyJSON = CodeTools.decodeBPstringtoJSON(countexapmple);
 	System.out.println("Microsample JSON: " + uglyJSON);
@@ -22,10 +22,13 @@ public class Main {
 	//create JsonParser object
 	JsonParser jsonParser = new JsonFactory().createParser(uglyJSON);
 	
+	IconsInBP testIcon = new IconsInBP();
 	
+	testIcon.getItemToShow().getClass();
+	System.out.println("testIcon.itemToShow[1].type: " + 	testIcon.getItemToShow().getClass()); 
     }
-
-    /*
+}
+    /* ToDoList
      * done: remove first char (it marks versionnumber ob BP)
      * done: decode BP zip 
      * done: decode BP base64
@@ -47,4 +50,26 @@ public class Main {
      * add preliminary 0
      *  
     */
-    }
+
+
+/*
+Objekthierarchieskizze: 
+blueprint
+	String bpname 
+	Object IconsInBP icons [4]
+		int iconIndex
+		Object GenericSignal[] itemToShow
+			String name
+			enum type
+	String versionnumber
+	Object entity
+		int entity_number
+		String name 
+		int positionX
+		int positionY
+		boolean constOnOff
+		Object Filter[] filtersignals
+			String name
+			int index
+			int count
+ */

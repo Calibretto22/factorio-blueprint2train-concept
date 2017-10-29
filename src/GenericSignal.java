@@ -1,8 +1,8 @@
 //class for all kinds of signals 
 
 public class GenericSignal {
-	String name;//name of the item i.e. "signal-L", "logistic-chest-storage" 
-	type typeOfSigngal;//type of signal i.e. "virtual", "item"
+	private String name;//name of the item i.e. "signal-L", "logistic-chest-storage" 
+	private type typeOfSigngal;//type of signal i.e. "virtual", "item"
 	//enum type: item, fluid,  recipe, virtual (enums sind listen von möglichen werten, die eine variable annehmen kann)
 	
 	GenericSignal (){};
@@ -24,17 +24,4 @@ public class GenericSignal {
 		return this.typeOfSigngal;}
 }
 
-/*
-
-public enum type {
-	item, fluid, recipe, virtual;
-	public String toString() {
-		switch (this) {
-		case item: return "item";
-		case recipe: return "recipe";
-		case virtual: return "virtual";
-		case fluid: return "fluid";
-		default: return "item";
-		}}}
-
-*/
+//wird vielleicht noch extended, falls es speziellere signale gibt
