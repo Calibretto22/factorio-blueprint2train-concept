@@ -22,11 +22,16 @@ public class Main {
 	//create JsonParser object
 	JsonParser jsonParser = new JsonFactory().createParser(uglyJSON);
 	
-	IconsInBP testIcon = new IconsInBP();
+	GenericSignal testSignal = new GenericSignal("logistic-chest-storage", type.item);
+	System.out.println("testSignal.getName: " + testSignal.getName());
+	System.out.println("testSignal.getType: " + testSignal.getType());
 	
-	testIcon.getItemToShow().getClass();
-	System.out.println("testIcon.itemToShow[1].type: " + 	testIcon.getItemToShow().getClass()); 
-    }
+	IconsInBP testIcons = new IconsInBP();
+	testIcons.setItemToShow(testSignal, 0);
+	System.out.println("testIcons.getItemToShow(0).name: " + testIcons.getItemToShow(0).getName()); 
+	System.out.println("testIcons.getItemToShow(0).type: " + testIcons.getItemToShow(0).getType()); 
+    
+	}
 }
     /* ToDoList
      * done: remove first char (it marks versionnumber ob BP)
@@ -56,8 +61,7 @@ public class Main {
 Objekthierarchieskizze: 
 blueprint
 	String bpname 
-	Object IconsInBP icons [4]
-		int iconIndex
+	Object IconsInBP icons 
 		Object GenericSignal[] itemToShow
 			String name
 			enum type

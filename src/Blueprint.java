@@ -5,11 +5,11 @@ public class Blueprint {
 	String labelofBP;
 	String item; // im BP steht ein "item", reason unknown
 	Entity[] stuffToBuild; //create class of Entitys
-	/*List*/ IconsInBP[] icons; //array oder list - das ist hier die frage
-	String versionNumber;
+	IconsInBP icons; //array oder list - das ist hier die frage
+	String versionNumber; //könnte vllt. auch ein sehr sehr langer int werden. 
 	
 	Blueprint(){
-		for (int i = 0; i<=3;i++) {icons = new IconsInBP[i];}
+		//for (int i = 0; i<=3;i++) {icons = new IconsInBP[i];} //does not compile
 	}
 	
 	public void setLabelOfBP(String labelofBP_) {
@@ -21,7 +21,7 @@ public class Blueprint {
 	public void setVersionOfBP(String versionNumber_) {
 		this.versionNumber = versionNumber_;}
 	
-	public IconsInBP[] getIcons() {
+	public IconsInBP getIcons() {
 		return icons;}
 
 }
