@@ -26,7 +26,7 @@ public class CodeTools {
     	    ByteArrayInputStream bais = new ByteArrayInputStream(bytearray_decoderVar);
     	    InflaterInputStream iis = new InflaterInputStream(bais);
 	    
-    	    String uglyJSONreturn = "";//es muss erstmal ein leerer string erzeugt werden
+    	    String uglyJSONreturn = "";//es muss erstmal ein leerer string erzeugt werden vx
 	    byte[] buffer = new byte[5];//ein buffer für i dunno
 	    int returnStringLength = -1;
 	    while ((returnStringLength = iis.read(buffer)) != -1) {
