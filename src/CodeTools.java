@@ -51,7 +51,7 @@ public class CodeTools {
 	}
     
 	static void parseJSON(JsonParser jsonParser, Blueprint importBP, IconsInBP icons, GenericSignal signal, boolean insidePropertiesObj) throws JsonParseException, IOException {
-		
+		//reminder: die enums der namen sind alle mit nur unterstrichen. beim einlesen muss das zur objekterstellung konvertiert werden.
 		//loop through the JsonTokens
 		while(jsonParser.nextToken() != JsonToken.END_OBJECT){
 			String name = jsonParser.getCurrentName();

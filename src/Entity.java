@@ -1,7 +1,18 @@
-
-public class Entity {//one item in a blueprint, some regular blueprint-attributes are to be added
+/*
+ * 	Object entity
+		int entity_number
+		String name 
+		int positionX
+		int positionY
+		boolean constOnOff
+		Object Filter[] filtersignals
+			String name
+			int index
+			int count
+ * */
+public class Entity {//one item in a blueprint, some regular blueprint-attributes are left out 
 	int entity_number;
-	String name;
+	itemname name;
     int positionX;
  	int positionY;
  	Boolean constOnOff;
@@ -29,18 +40,6 @@ public class Entity {//one item in a blueprint, some regular blueprint-attribute
 	return stack;	
     	}
     
-void createItemLib(Entity [] library) {
-	int i=0; //local index
-	library[i++] = new Entity ("programmable_speaker", 200);
-	library[i++] = new Entity ("heat_exchanger",100);
-	library[i++] = new Entity ("heat_pipe",100);
-	library[i++] = new Entity ("nuclear_reactor",100);
-	library[i++] = new Entity ("steam_turbine",20);
-	library[i++] = new Entity ("tank",50);
-
-	library[i++] = new Entity ("solar-panel",50);
-	}
-
 
 
 }//end Entity
