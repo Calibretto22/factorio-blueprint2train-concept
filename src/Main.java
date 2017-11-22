@@ -22,14 +22,14 @@ public class Main {
 	//create JsonParser object
 	JsonParser jsonParser = new JsonFactory().createParser(uglyJSON);
 	
-	GenericSignal testSignal = new GenericSignal("logistic-chest-storage", type.item);
-	System.out.println("testSignal.getName: " + testSignal.getName());
-	System.out.println("testSignal.getType: " + testSignal.getType());
+	GenericSignal testSignal = new GenericSignal(itemname.production_science_pack, type.item);
+	System.out.println("testSignal.getName: " + testSignal.getNameString());
+	System.out.println("testSignal.getType: " + testSignal.getTypeString());
 	
 	IconsInBP testIcons = new IconsInBP();
 	testIcons.setItemToShow(testSignal, 0);
-	System.out.println("testIcons.getItemToShow(0).name: " + testIcons.getItemToShow(0).getName()); 
-	System.out.println("testIcons.getItemToShow(0).type: " + testIcons.getItemToShow(0).getType()); 
+	System.out.println("testIcons.getItemToShow(0).name: " + testIcons.getItemToShow(0).getNameString()); 
+	System.out.println("testIcons.getItemToShow(0).type: " + testIcons.getItemToShow(0).getTypeString()); 
     
 	}
 }
@@ -63,7 +63,7 @@ blueprint
 	String bpname 
 	Object IconsInBP icons 
 		Object GenericSignal[] itemToShow
-			String name
+			enum name
 			enum type
 	String versionnumber
 	Object entity

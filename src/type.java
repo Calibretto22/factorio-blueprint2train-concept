@@ -3,10 +3,11 @@
 //sondern als objekt ihres jeweiligen types:   setType(type.item);
 
 //kann ich eine ganze Enum-Klasse erzeugen, wo verschiedene enums drin sind? 
+//	nicht praktikabel 
 
 //zB auch die Anzahl der der möglichen Filter und signale für 
 
-public enum type {
+	public enum type {
 	item, fluid, recipe, virtual;
 	public String toString() {
 		switch (this) {
