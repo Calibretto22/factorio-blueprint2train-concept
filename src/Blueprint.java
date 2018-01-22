@@ -5,7 +5,7 @@ public class Blueprint {
 	String labelofBP;
 	String item; // im BP steht ein "item", reason unknown
 	//error
-	Entity[] stuffToBuild = new Entity()[]; //create class of Entitys
+	//Entity[] stuffToBuild = new Entity()[]; //create class of Entitys
 	//error end
 	IconsInBP icons; //array oder list - das ist hier die frage
 	String versionNumber; //könnte vllt. auch ein sehr sehr langer int werden. 
