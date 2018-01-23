@@ -1,8 +1,14 @@
 //class for the icons in a Blueprint
 public class IconsInBP {
-		GenericSignal[] itemToShow = new GenericSignal[4];
+		GenericSignal[] itemToShow;
 		
-		IconsInBP (){}//end empty contructor
+		IconsInBP (){
+			for (int i=0; i<4; i++) {
+				itemToShow[i] = new GenericSignal();
+/*				.setName(itemname.valueOf(Tools.stringEingabe()));
+				itemToShow[i].setType(type.valueOf(Tools.stringEingabe()));*/
+			}
+		}//end of manual input Constructor
 		
 	public void setItemToShow(GenericSignal itemToShow_, int iconIndex_) {
 		itemToShow[iconIndex_] = itemToShow_;

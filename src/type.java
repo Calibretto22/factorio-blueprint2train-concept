@@ -15,5 +15,5 @@
 		case recipe: return "recipe";
 		case virtual: return "virtual";
 		case fluid: return "fluid";
-		default: return "item";
+		default: return "invalid type"; //if you see this, you did something wrong, programm will crash because of invalid enum
 		}}}

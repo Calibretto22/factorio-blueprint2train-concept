@@ -2,6 +2,7 @@
 //alle enums haben stattdessen unterstriche
 //die string-ausgabe der enums ist aber wie im original und somit blueprint- / json-export-tauglich
 
+//items of .16 are missing
 	public enum itemname {
 		wooden_chest,
 		iron_chest,
@@ -697,7 +698,7 @@ public int getStacksize() {
 		case personal_laser_defense_equipment: return 20;
 		case discharge_defense_equipment: return 20;
 		case exoskeleton_equipment: return 10;
-		case personal_roboport_equipment: return 5;
+		case personal_roboport_equipment: return 10;//change from 5 to 10 in version .16.17
 		case personal_roboport_mk2_equipment: return 5;
 		case night_vision_equipment: return 20;
 		case stone_wall: return 100;
