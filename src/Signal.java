@@ -1,22 +1,22 @@
 
 //class for all kinds of signals 
 
-public class GenericSignal {
+public class Signal {
 	private itemname name;//name of the item i.e. "signal-L", "logistic-chest-storage" 
 	private type typeOfSignal;//type of signal i.e. "virtual", "item"
 	//enum type: item, fluid,  recipe, virtual (enums sind listen von möglichen werten, die eine variable annehmen kann)
 	
-	GenericSignal (){
+	Signal (){
 		name = itemname.valueOf(Tools.stringEingabe());
 		typeOfSignal = type.valueOf(Tools.stringEingabe());
 	};
 	
-	GenericSignal (itemname name_, type type_){ //constructor with enums
+	Signal (itemname name_, type type_){ //constructor with enums
 		name = name_;
 		typeOfSignal = type_;
 		}
 
-	GenericSignal (String name_, String type_){ //constructor with string from json parser
+	Signal (String name_, String type_){ //constructor with string from json parser
 		this.name = itemname.valueOf(name_);
 		this.typeOfSignal = type.valueOf(type_);
 		}

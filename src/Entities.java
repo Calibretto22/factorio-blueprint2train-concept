@@ -10,18 +10,20 @@
 			int index
 			int count
  * */
-public class Entity {//one item in a blueprint, some regular blueprint-attributes are left out 
-	int entity_number;
+public class Entities {//one item in a blueprint, some regular blueprint-attributes are left out 
+	int entity_number;//when creating auto-increment
 	itemname name;
     int positionX;
  	int positionY;
- 	Boolean constOnOff;
- 	Filter[] filtersignals = new Filter[18]; //Objekt für die CC-signale und ggf. RequesterChest-Filter 
+ 	int direction; //1-4
+ 	// Boolean constOnOff; //nicht hier definieren
+ 	//Filter[] filtersignals = new Filter[18]; //nicht hier definieren
+ 		//Objekt für die CC-signale und ggf. RequesterChest-Filter 
  	       
-    Entity (){}
+    Entities (){}
     
-    Entity(String filterName_, int stack_size_){
-	name = filterName_;
+    Entities(String filterName_, int stack_size_){
+	name = itemname.valueOf(filterName_);
 	//stack_size = stack_size_;
 }
     
